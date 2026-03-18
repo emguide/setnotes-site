@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — SetNotes</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF6B00;
+      --orange-light: #FF8C33;
+      --orange-dim: rgba(255, 107, 0, 0.15);
+      --bg: #0A0A0A;
+      --surface: #111111;
+      --surface-2: #181818;
+      --border: rgba(255,255,255,0.07);
+      --text: #F0EDE8;
+      --text-muted: #888880;
+      --text-dim: #555550;
+      --gold: #FFD700;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Barlow', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--orange); }
+
+    .nav-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      margin-right: 10px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    .nav-links { display: flex; gap: 36px; }
+
+    .nav-cta {
+      background: var(--orange);
+      color: #fff !important;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--orange-light) !important;
+      transform: translateY(-1px);
+    }
+
+    /* ─── PAGE CONTENT ─── */
+    .page-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 140px 48px 100px;
+    }
+
+    .page-eyebrow {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .page-eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--orange);
+    }
+
+    .page-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(48px, 6vw, 72px);
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .page-meta {
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ─── PROSE ─── */
+    .prose h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-top: 48px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .prose h2::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 2px;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .prose p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .prose ul {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    .prose ul li {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .prose ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    .prose a {
+      color: var(--orange);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 107, 0, 0.3);
+      transition: border-color 0.2s;
+    }
+
+    .prose a:hover {
+      border-color: var(--orange);
+    }
+
+    .prose strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Summary highlight card */
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+
+    .summary-card p {
+      margin-bottom: 0;
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 48px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-decoration: none;
+    }
+
+    .footer-logo span { color: var(--orange); }
+
+    .footer-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 5px;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+
+    .footer-links { display: flex; gap: 28px; }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-dim);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text-muted); }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { gap: 20px; }
+
+      .page-wrapper { padding: 120px 24px 80px; }
+
+      footer {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+        padding: 32px 24px;
+      }
+
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="assets/appicon.png" alt="SetNotes icon" class="nav-icon" />Set<span>Notes</span></a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#analytics">Progress</a>
+      <a href="index.html#download">Download</a>
+      <a href="index.html#download" class="nav-cta">Get App</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="page-wrapper">
+    <div class="page-eyebrow">Legal</div>
+    <h1 class="page-title">Privacy<br>Policy</h1>
+    <div class="page-meta">Effective date: February 25, 2026</div>
+
+    <div class="summary-card">
+      <p>SetNotes is designed to keep your data on your device. We do not collect, store, or transmit any personal information. There are no accounts, no analytics, and no tracking.</p>
+    </div>
+
+    <div class="prose">
+
+      <h2>Data Storage</h2>
+      <p>All workout data, exercises, templates, programs, and preferences are stored locally on your device using Apple's SwiftData framework. Nothing is sent to our servers because we do not operate any servers.</p>
+      <p>If you enable file export in Preferences, workout files are written to your device's local storage as markdown files. These files remain on your device unless you choose to share them.</p>
+
+      <h2>Keychain Storage</h2>
+      <p>If you use the optional AI Workout Parsing feature, your API key is stored in your device's Keychain, which is Apple's secure encrypted storage. We never see, collect, or have access to your API keys.</p>
+
+      <h2>Voice Dictation</h2>
+      <p>Voice dictation uses Apple's on-device speech recognition. Audio is processed locally on your device and is not sent to any external server.</p>
+
+      <h2>AI Workout Parsing (Optional)</h2>
+      <p>If you enable AI Workout Parsing, the text of your current workout note is sent to the third-party AI provider you choose (Grok, Gemini, or DeepSeek). This is the only feature that transmits any data off your device, and it is disabled by default.</p>
+      <p>When enabled:</p>
+      <ul>
+        <li>Only workout text is sent &mdash; no personal identifiers, no device information, no account data</li>
+        <li>Data is sent directly from your device to the AI provider using your own API key</li>
+        <li>We do not act as an intermediary and have no access to the data in transit</li>
+        <li>Each provider's own privacy policy governs how they handle the data they receive</li>
+      </ul>
+      <p>You can disable this feature at any time in Preferences.</p>
+
+      <h2>Data Collection</h2>
+      <p>We do not collect any data. Specifically:</p>
+      <ul>
+        <li>No personal information</li>
+        <li>No usage analytics</li>
+        <li>No crash reporting</li>
+        <li>No advertising identifiers</li>
+        <li>No cookies or tracking pixels</li>
+        <li>No third-party analytics SDKs</li>
+      </ul>
+
+      <h2>Third-Party Services</h2>
+      <p>SetNotes does not include any third-party analytics, advertising, or tracking SDKs. The only third-party communication occurs if you explicitly enable AI Workout Parsing, as described above.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>We do not knowingly collect any information from anyone, including children under 13. The app does not require an account and collects no data.</p>
+
+      <h2>Data Deletion</h2>
+      <p>Since all data is stored locally on your device, you have complete control. Deleting the app removes all data permanently. You can also delete individual workouts, exercises, and templates from within the app at any time.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>If we update this privacy policy, the revised version will be included in an app update. The effective date at the top of this page indicates when the policy was last changed.</p>
+
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy, contact us at <a href="mailto:support@emguide.com">support@emguide.com</a>.</p>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="footer-logo"><img src="assets/appicon.png" alt="SetNotes icon" class="footer-icon" />Set<span>Notes</span></a>
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="#">Support</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 SetNotes. Made for lifters.</div>
+  </footer>
+
+</body>
+</html>

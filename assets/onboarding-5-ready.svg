@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none">
+  <defs>
+    <!-- Outer glow -->
+    <radialGradient id="iconGlow" cx="50%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#CC3333" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#CC3333" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Leather gradient -->
+    <linearGradient id="leather" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#2A2A2A"/>
+      <stop offset="100%" stop-color="#1A1A1A"/>
+    </linearGradient>
+    <!-- Weight plate gradient -->
+    <radialGradient id="plateGrad" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#D44040"/>
+      <stop offset="60%" stop-color="#B83030"/>
+      <stop offset="100%" stop-color="#922525"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Scale 1.6x, centered at 200,160 (original center was ~200,120) -->
+  <g transform="translate(200, 160) scale(1.6) translate(-200, -120)">
+
+    <!-- Background glow -->
+    <ellipse cx="200" cy="120" rx="90" ry="90" fill="url(#iconGlow)"/>
+
+    <!-- App icon shadow -->
+    <rect x="148" y="72" width="104" height="104" rx="24" fill="#000000" opacity="0.4" transform="translate(0, 6)"/>
+
+    <!-- App icon background — dark leather journal -->
+    <rect x="148" y="68" width="104" height="104" rx="24" fill="url(#leather)" stroke="#333" stroke-width="0.5"/>
+
+    <!-- Leather texture — faint vertical grain lines -->
+    <line x1="170" y1="72" x2="170" y2="168" stroke="#252525" stroke-width="0.3" opacity="0.5"/>
+    <line x1="185" y1="70" x2="185" y2="170" stroke="#222" stroke-width="0.3" opacity="0.4"/>
+    <line x1="200" y1="69" x2="200" y2="171" stroke="#252525" stroke-width="0.3" opacity="0.3"/>
+    <line x1="215" y1="70" x2="215" y2="170" stroke="#222" stroke-width="0.3" opacity="0.4"/>
+
+    <!-- Spine ridges (left edge of book) -->
+    <line x1="154" y1="82" x2="154" y2="158" stroke="#333" stroke-width="1.2" opacity="0.6"/>
+    <line x1="156.5" y1="78" x2="156.5" y2="162" stroke="#2A2A2A" stroke-width="0.8" opacity="0.5"/>
+    <line x1="158.5" y1="76" x2="158.5" y2="164" stroke="#333" stroke-width="0.6" opacity="0.4"/>
+    <line x1="160" y1="74" x2="160" y2="166" stroke="#2A2A2A" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Red ribbon bookmark (right side, ~78% across) -->
+    <rect x="229" y="68" width="4" height="104" fill="#CC2222"/>
+    <!-- Ribbon texture highlight -->
+    <line x1="230" y1="68" x2="230" y2="172" stroke="#DD4444" stroke-width="0.5" opacity="0.4"/>
+
+    <!-- Weight plate — outer circle -->
+    <circle cx="196" cy="120" r="30" fill="url(#plateGrad)" stroke="#7A1A1A" stroke-width="1"/>
+
+    <!-- Plate edge — scalloped bumpy rim -->
+    <circle cx="196" cy="120" r="30" fill="none" stroke="#A02828" stroke-width="0.5" stroke-dasharray="3,2" opacity="0.5"/>
+
+    <!-- Cross ridges (4 raised lines at 45° diagonals) -->
+    <line x1="184" y1="108" x2="177" y2="101" stroke="#8A2020" stroke-width="2"/>
+    <line x1="208" y1="132" x2="215" y2="139" stroke="#8A2020" stroke-width="2"/>
+    <line x1="208" y1="108" x2="215" y2="101" stroke="#8A2020" stroke-width="2"/>
+    <line x1="184" y1="132" x2="177" y2="139" stroke="#8A2020" stroke-width="2"/>
+
+    <!-- Inner raised ring -->
+    <circle cx="196" cy="120" r="20" fill="none" stroke="#9A2828" stroke-width="1" opacity="0.6"/>
+
+    <!-- Center hub -->
+    <circle cx="196" cy="120" r="8" fill="#7A1A1A" stroke="#922525" stroke-width="1"/>
+    <!-- Center hole -->
+    <circle cx="196" cy="120" r="4" fill="#0C0C0C"/>
+
+    <!-- "45 LB" left -->
+    <text x="177" y="119" font-family="Georgia, serif" font-size="6" fill="#C8B89A" font-weight="700" text-anchor="middle">45</text>
+    <text x="177" y="125" font-family="Georgia, serif" font-size="5" fill="#C8B89A" font-weight="700" text-anchor="middle">LB</text>
+
+    <!-- "45 LB" right -->
+    <text x="215" y="119" font-family="Georgia, serif" font-size="6" fill="#C8B89A" font-weight="700" text-anchor="middle">45</text>
+    <text x="215" y="125" font-family="Georgia, serif" font-size="5" fill="#C8B89A" font-weight="700" text-anchor="middle">LB</text>
+
+    <!-- Subtle ring around icon -->
+    <rect x="144" y="64" width="112" height="112" rx="28" fill="none" stroke="#CC3333" stroke-width="1.5" opacity="0.3"/>
+
+  </g>
+</svg>

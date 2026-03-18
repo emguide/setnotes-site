@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8E8E93" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#8E8E93" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Cloud shadow gradient -->
+    <linearGradient id="cloudShadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F0F0F5"/>
+      <stop offset="100%" stop-color="#D8D8DD"/>
+    </linearGradient>
+    <!-- Cloud highlight -->
+    <radialGradient id="cloudHighlight" cx="35%" cy="25%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#F8F8FA" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#E8E8ED" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Soft background glow -->
+  <ellipse cx="200" cy="155" rx="160" ry="140" fill="url(#bgGlow)"/>
+
+  <!-- Cloud drop shadow -->
+  <path d="
+    M100 200
+    C80 200 62 195 62 178
+    C62 162 75 153 90 155
+    C88 128 108 108 135 108
+    C148 108 158 114 165 120
+    C172 105 188 95 210 95
+    C240 95 262 118 262 145
+    C278 142 295 152 295 168
+    C295 185 282 198 265 200
+    Z
+  " fill="black" fill-opacity="0.08" transform="translate(2, 4)"/>
+
+  <!-- Main cloud body - large and fluffy -->
+  <path d="
+    M100 200
+    C80 200 62 195 62 178
+    C62 162 75 153 90 155
+    C88 128 108 108 135 108
+    C148 108 158 114 165 120
+    C172 105 188 95 210 95
+    C240 95 262 118 262 145
+    C278 142 295 152 295 168
+    C295 185 282 198 265 200
+    Z
+  " fill="url(#cloudShadow)"/>
+
+  <!-- Cloud highlight overlay -->
+  <path d="
+    M100 200
+    C80 200 62 195 62 178
+    C62 162 75 153 90 155
+    C88 128 108 108 135 108
+    C148 108 158 114 165 120
+    C172 105 188 95 210 95
+    C240 95 262 118 262 145
+    C278 142 295 152 295 168
+    C295 185 282 198 265 200
+    Z
+  " fill="url(#cloudHighlight)"/>
+
+  <!-- Cloud outline -->
+  <path d="
+    M100 200
+    C80 200 62 195 62 178
+    C62 162 75 153 90 155
+    C88 128 108 108 135 108
+    C148 108 158 114 165 120
+    C172 105 188 95 210 95
+    C240 95 262 118 262 145
+    C278 142 295 152 295 168
+    C295 185 282 198 265 200
+    Z
+  " stroke="#C7C7CC" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+
+  <!-- Inner cloud highlight edges - fluffy detail lines -->
+  <path d="
+    M95 185
+    C85 183 76 178 76 170
+    C76 160 85 155 95 157
+  " stroke="#E0E0E5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <path d="
+    M100 160
+    C98 140 112 120 135 118
+    C145 117 155 120 162 125
+  " stroke="#E0E0E5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <path d="
+    M175 115
+    C185 105 198 98 215 98
+    C235 98 250 110 255 128
+  " stroke="#E0E0E5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <path d="
+    M260 148
+    C272 148 285 155 287 168
+  " stroke="#E0E0E5" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <!-- WiFi arcs — orange, bold, true circular arcs -->
+  <!-- Dot -->
+  <circle cx="195" cy="188" r="10" fill="#FF9500"/>
+  <!-- Arc 1 (inner) — radius 28 -->
+  <path d="M176 170 A28,28 0 0,1 214,170"
+        stroke="#FF9500" stroke-width="11" stroke-linecap="square" fill="none"/>
+  <!-- Arc 2 (middle) — radius 48 -->
+  <path d="M162 153 A48,48 0 0,1 228,153"
+        stroke="#FF9500" stroke-width="11" stroke-linecap="square" fill="none"/>
+  <!-- Arc 3 (outer) — radius 68 -->
+  <path d="M148 136 A68,68 0 0,1 242,136"
+        stroke="#FF9500" stroke-width="11" stroke-linecap="square" fill="none"/>
+
+  <!-- NO entry circle — bold, centered, red -->
+  <circle cx="195" cy="155" r="72" stroke="#FF3B30" stroke-width="12" fill="none"/>
+  <!-- Diagonal slash -->
+  <line x1="144" y1="104" x2="246" y2="206"
+        stroke="#FF3B30" stroke-width="12" stroke-linecap="square"/>
+</svg>
